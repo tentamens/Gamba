@@ -1,0 +1,87 @@
+[gd_scene format=3 uid="uid://c88e51mixntmx"]
+
+[node name="stats" type="Node2D"]
+
+[node name="FAR" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "FAR"
+
+[node name="total" type="Label" parent="FAR"]
+layout_mode = 0
+offset_left = 35.0
+offset_right = 75.0
+offset_bottom = 23.0
+
+[node name="ratio" type="Label" parent="FAR"]
+layout_mode = 0
+offset_left = 153.0
+offset_right = 193.0
+offset_bottom = 23.0
+
+[node name="MID" type="Label" parent="."]
+offset_top = 35.0
+offset_right = 40.0
+offset_bottom = 61.0
+text = "MID"
+
+[node name="total" type="Label" parent="MID"]
+layout_mode = 0
+offset_left = 35.0
+offset_right = 75.0
+offset_bottom = 23.0
+
+[node name="ratio" type="Label" parent="MID"]
+layout_mode = 0
+offset_left = 153.0
+offset_right = 193.0
+offset_bottom = 23.0
+
+[node name="RL" type="Label" parent="."]
+offset_top = 66.0
+offset_right = 40.0
+offset_bottom = 92.0
+text = "RL
+"
+
+[node name="total" type="Label" parent="RL"]
+layout_mode = 0
+offset_left = 35.0
+offset_right = 75.0
+offset_bottom = 23.0
+
+[node name="ratio" type="Label" parent="RL"]
+layout_mode = 0
+offset_left = 153.0
+offset_right = 193.0
+offset_bottom = 23.0
+
+[node name="MIDDLE" type="Label" parent="."]
+offset_top = 99.0
+offset_right = 61.0
+offset_bottom = 125.0
+text = "MIDDLE"
+
+[node name="total" type="Label" parent="MIDDLE"]
+layout_mode = 0
+offset_left = 65.0
+offset_right = 105.0
+offset_bottom = 23.0
+
+[node name="ratio" type="Label" parent="MIDDLE"]
+layout_mode = 0
+offset_left = 183.0
+offset_right = 223.0
+offset_bottom = 23.0
+
+[node name="Total" type="Label" parent="."]
+offset_top = 132.0
+offset_right = 61.0
+offset_bottom = 158.0
+text = "TOTAL"
+
+[node name="total" type="Label" parent="Total"]
+layout_mode = 0
+offset_left = 65.0
+offset_right = 105.0
+offset_bottom = 23.0

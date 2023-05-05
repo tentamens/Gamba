@@ -1,0 +1,169 @@
+[gd_scene load_steps=7 format=3 uid="uid://gr4w0fpbvorr"]
+
+[ext_resource type="Script" path="res://Scenes/UI/Bet.gd" id="1_2bibu"]
+
+[sub_resource type="Theme" id="Theme_31e78"]
+default_font_size = 50
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pme2b"]
+bg_color = Color(0.219608, 0.227451, 0.227451, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.360784, 0.403922, 0.494118, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+shadow_size = 5
+shadow_offset = Vector2(7.17, 8.21)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j6j4c"]
+bg_color = Color(0, 0.745098, 0.0980392, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+shadow_size = 8
+shadow_offset = Vector2(7.847, 6.65)
+anti_aliasing_size = 0.718
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_aq0cp"]
+bg_color = Color(0.145098, 0, 0.937255, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+anti_aliasing_size = 0.718
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_af7u8"]
+bg_color = Color(0.101961, 0, 0.713726, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+shadow_size = 5
+shadow_offset = Vector2(4.85, 4.828)
+anti_aliasing_size = 0.718
+
+[node name="UI" type="Node2D"]
+
+[node name="control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+theme = SubResource("Theme_31e78")
+
+[node name="Control" type="Control" parent="control"]
+anchors_preset = 0
+offset_left = 29.0
+offset_top = 526.0
+offset_right = 1175.0
+offset_bottom = 643.0
+theme = SubResource("Theme_31e78")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="control/Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -32.0
+offset_right = -32.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="left" type="MarginContainer" parent="control/Control/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 101
+
+[node name="HBoxContainer" type="HBoxContainer" parent="control/Control/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="control/Control/HBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.56
+
+[node name="MarginContainer2" type="MarginContainer" parent="control/Control/HBoxContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_top = 22
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="control/Control/HBoxContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="control/Control/HBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+theme_override_constants/margin_left = 127
+
+[node name="Bet" type="LineEdit" parent="control/Control/HBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 22
+theme_override_styles/normal = SubResource("StyleBoxFlat_pme2b")
+alignment = 1
+script = ExtResource("1_2bibu")
+
+[node name="MarginContainer" type="MarginContainer" parent="control/Control/HBoxContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_top = 45
+
+[node name="MarginContainer" type="MarginContainer" parent="control/Control/HBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 11
+theme_override_constants/margin_right = 12
+
+[node name="HBoxContainer" type="HBoxContainer" parent="control/Control/HBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="control/Control/HBoxContainer/HBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="MarginContainer2" type="MarginContainer" parent="control/Control/HBoxContainer/HBoxContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_stretch_ratio = 0.41
+theme_override_constants/margin_top = 9
+
+[node name="Gamble" type="Button" parent="control/Control/HBoxContainer/HBoxContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_j6j4c")
+theme_override_styles/hover = SubResource("StyleBoxFlat_aq0cp")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_af7u8")
+action_mode = 0
+text = "Bet"
+
+[node name="MarginContainer" type="MarginContainer" parent="control/Control/HBoxContainer/HBoxContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.41
+theme_override_constants/margin_top = -15
+
+[node name="MarginContainer" type="MarginContainer" parent="control/Control/HBoxContainer/HBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 430
+
+[node name="MarginContainer2" type="MarginContainer" parent="control/Control/HBoxContainer/HBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.41
+
+[node name="right" type="MarginContainer" parent="control/Control/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_right = -69

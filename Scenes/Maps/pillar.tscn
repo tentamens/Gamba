@@ -1,0 +1,189 @@
+[gd_scene load_steps=7 format=3 uid="uid://byepsacl5ug1y"]
+
+[ext_resource type="Script" path="res://Scenes/Scripts/pillar.gd" id="1_lx0lx"]
+[ext_resource type="PackedScene" uid="uid://gr4w0fpbvorr" path="res://Scenes/UI/Pegs.tscn" id="2_yal52"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pmfxv"]
+bg_color = Color(0.0980392, 0.0431373, 0.168627, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lahwn"]
+bg_color = Color(0.219501, 0.219501, 0.219501, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0, 0.905882, 0.952941, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 1
+corner_radius_bottom_left = 1
+corner_detail = 9
+expand_margin_left = 5.0
+expand_margin_top = 5.0
+expand_margin_right = 5.0
+expand_margin_bottom = 5.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0nt4g"]
+bg_color = Color(0.933333, 0.117647, 1, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+expand_margin_left = 1.0
+expand_margin_right = 1.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tqdqk"]
+bg_color = Color(0.239216, 0.239216, 0.239216, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0.905882, 0.952941, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[node name="pillar" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_lx0lx")
+
+[node name="Panel2" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -30.4506
+anchor_top = -0.725
+anchor_right = -30.4506
+anchor_bottom = -0.725
+offset_left = 1152.02
+offset_right = 2300.02
+offset_bottom = 649.0
+scale = Vector2(1.12384, 1.12384)
+theme_override_styles/panel = SubResource("StyleBoxFlat_pmfxv")
+metadata/_edit_use_anchors_ = true
+
+[node name="pillar" type="ProgressBar" parent="."]
+layout_mode = 0
+offset_left = 263.0
+offset_top = 102.0
+offset_right = 421.0
+offset_bottom = 464.0
+theme_override_font_sizes/font_size = 38
+theme_override_styles/background = SubResource("StyleBoxFlat_lahwn")
+theme_override_styles/fill = SubResource("StyleBoxFlat_0nt4g")
+value = 50.0
+fill_mode = 3
+
+[node name="label0" type="Label" parent="."]
+layout_mode = 0
+offset_left = 331.0
+offset_top = 42.0
+offset_right = 371.0
+offset_bottom = 94.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/shadow_outline_size = 12
+theme_override_font_sizes/font_size = 35
+text = "4x"
+
+[node name="label1" type="Label" parent="."]
+layout_mode = 0
+offset_left = 435.0
+offset_top = 101.0
+offset_right = 475.0
+offset_bottom = 153.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/shadow_outline_size = 12
+theme_override_font_sizes/font_size = 35
+text = "2x"
+
+[node name="label2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 428.0
+offset_top = 182.0
+offset_right = 497.0
+offset_bottom = 234.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/shadow_outline_size = 12
+theme_override_font_sizes/font_size = 35
+text = "1.5x"
+
+[node name="label3" type="Label" parent="."]
+layout_mode = 0
+offset_left = 441.0
+offset_top = 265.0
+offset_right = 481.0
+offset_bottom = 317.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/shadow_outline_size = 12
+theme_override_font_sizes/font_size = 35
+text = "1x"
+
+[node name="label4" type="Label" parent="."]
+layout_mode = 0
+offset_left = 448.0
+offset_top = 347.0
+offset_right = 488.0
+offset_bottom = 399.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/shadow_outline_size = 12
+theme_override_font_sizes/font_size = 35
+text = "0x"
+
+[node name="label5" type="Label" parent="."]
+layout_mode = 0
+offset_left = 441.0
+offset_top = 442.0
+offset_right = 481.0
+offset_bottom = 494.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/shadow_outline_size = 12
+theme_override_font_sizes/font_size = 35
+text = "0x"
+
+[node name="2x" type="Button" parent="."]
+layout_mode = 0
+offset_left = 746.0
+offset_top = 526.0
+offset_right = 799.0
+offset_bottom = 560.0
+scale = Vector2(2.21943, 2.21943)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 1
+theme_override_font_sizes/font_size = 21
+theme_override_styles/normal = SubResource("StyleBoxFlat_tqdqk")
+text = "2x"
+
+[node name="4x" type="Button" parent="."]
+layout_mode = 0
+offset_left = 898.0
+offset_top = 527.0
+offset_right = 951.0
+offset_bottom = 561.0
+scale = Vector2(2.21943, 2.21943)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 1
+theme_override_font_sizes/font_size = 21
+theme_override_styles/normal = SubResource("StyleBoxFlat_tqdqk")
+text = "4x"
+
+[node name="UI" parent="." instance=ExtResource("2_yal52")]
+
+[connection signal="pressed" from="2x" to="." method="changeValue"]
+[connection signal="pressed" from="4x" to="." method="changeValue"]
+[connection signal="text_changed" from="UI/control/Control/HBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer2/Bet" to="." method="_on_bet_text_changed"]
+[connection signal="pressed" from="UI/control/Control/HBoxContainer/HBoxContainer/HBoxContainer/VBoxContainer/Gamble" to="." method="_on_gamble_pressed"]
+
+[editable path="UI"]

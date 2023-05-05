@@ -1,0 +1,47 @@
+[gd_scene load_steps=6 format=3 uid="uid://dceoalln10pi2"]
+
+[ext_resource type="Script" path="res://ball.gd" id="1_y6ajy"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_e2arc"]
+radius = 20.025
+
+[sub_resource type="SphereMesh" id="SphereMesh_i2efd"]
+rings = 73
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_oifba"]
+radius = 21.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h8vfp"]
+
+[node name="ball" type="CharacterBody2D"]
+position = Vector2(573, 209)
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("1_y6ajy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(0.263199, 0.263199)
+shape = SubResource("CircleShape2D_e2arc")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="."]
+position = Vector2(4.76837e-07, 4.76837e-06)
+scale = Vector2(9.60843, 9.59754)
+mesh = SubResource("SphereMesh_i2efd")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+scale = Vector2(0.288872, 0.288872)
+shape = SubResource("CircleShape2D_oifba")
+
+[node name="Area2D2" type="Area2D" parent="."]
+collision_layer = 4
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
+shape = SubResource("RectangleShape2D_h8vfp")
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Area2D2" to="." method="_on_area_2d_2_area_entered"]

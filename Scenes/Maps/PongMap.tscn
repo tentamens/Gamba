@@ -1,0 +1,194 @@
+[gd_scene load_steps=2 format=3 uid="uid://b3gjuw1b8y17o"]
+
+[ext_resource type="PackedScene" uid="uid://c1nkorb16rgih" path="res://Scenes/Maps/Units/Peg.tscn" id="1_htcsp"]
+
+[node name="PongMap" type="Node2D"]
+
+[node name="Peg2" parent="." instance=ExtResource("1_htcsp")]
+position = Vector2(544, 219)
+
+[node name="Peg3" parent="." instance=ExtResource("1_htcsp")]
+position = Vector2(588, 219)
+
+[node name="Peg4" parent="." instance=ExtResource("1_htcsp")]
+position = Vector2(521, 250)
+
+[node name="Peg5" parent="." instance=ExtResource("1_htcsp")]
+position = Vector2(565, 250)
+
+[node name="Peg6" parent="." instance=ExtResource("1_htcsp")]
+position = Vector2(610, 250)
+
+[node name="Peg7" parent="." instance=ExtResource("1_htcsp")]
+position = Vector2(500, 275)
+
+[node name="Peg8" parent="." instance=ExtResource("1_htcsp")]
+position = Vector2(544, 275)
+
+[node name="Peg9" parent="." instance=ExtResource("1_htcsp")]
+position = Vector2(588, 274)
+
+[node name="Peg10" parent="." instance=ExtResource("1_htcsp")]
+position = Vector2(632, 275)
+
+[node name="Peg11" parent="." instance=ExtResource("1_htcsp")]
+position = Vector2(521, 305)
+
+[node name="Peg12" parent="." instance=ExtResource("1_htcsp")]
+position = Vector2(566, 305)
+
+[node name="Peg13" parent="." instance=ExtResource("1_htcsp")]
+position = Vector2(610, 304)
+
+[node name="Peg14" parent="." instance=ExtResource("1_htcsp")]
+position = Vector2(654, 305)
+
+[node name="Peg15" parent="." instance=ExtResource("1_htcsp")]
+position = Vector2(476, 305)
+
+[node name="Peg16" parent="." instance=ExtResource("1_htcsp")]
+position = Vector2(545, 331)
+
+[node name="Peg17" parent="." instance=ExtResource("1_htcsp")]
+position = Vector2(590, 331)
+
+[node name="Peg18" parent="." instance=ExtResource("1_htcsp")]
+position = Vector2(634, 330)
+
+[node name="Peg19" parent="." instance=ExtResource("1_htcsp")]
+position = Vector2(678, 330)
+
+[node name="Peg20" parent="." instance=ExtResource("1_htcsp")]
+position = Vector2(500, 331)
+
+[node name="Peg21" parent="." instance=ExtResource("1_htcsp")]
+position = Vector2(455, 331)
+
+[node name="Peg22" parent="." instance=ExtResource("1_htcsp")]
+position = Vector2(566, 360)
+
+[node name="Peg23" parent="." instance=ExtResource("1_htcsp")]
+position = Vector2(610, 360)
+
+[node name="Peg24" parent="." instance=ExtResource("1_htcsp")]
+position = Vector2(654, 359)
+
+[node name="Peg25" parent="." instance=ExtResource("1_htcsp")]
+position = Vector2(698, 359)
+
+[node name="Peg26" parent="." instance=ExtResource("1_htcsp")]
+position = Vector2(521, 360)
+
+[node name="Peg27" parent="." instance=ExtResource("1_htcsp")]
+position = Vector2(476, 360)
+
+[node name="Peg28" parent="." instance=ExtResource("1_htcsp")]
+position = Vector2(431, 360)
+
+[node name="Peg29" parent="." instance=ExtResource("1_htcsp")]
+position = Vector2(590, 386)
+
+[node name="Peg30" parent="." instance=ExtResource("1_htcsp")]
+position = Vector2(634, 386)
+
+[node name="Peg31" parent="." instance=ExtResource("1_htcsp")]
+position = Vector2(678, 385)
+
+[node name="Peg32" parent="." instance=ExtResource("1_htcsp")]
+position = Vector2(722, 385)
+
+[node name="Peg33" parent="." instance=ExtResource("1_htcsp")]
+position = Vector2(545, 386)
+
+[node name="Peg34" parent="." instance=ExtResource("1_htcsp")]
+position = Vector2(500, 386)
+
+[node name="Peg35" parent="." instance=ExtResource("1_htcsp")]
+position = Vector2(455, 386)
+
+[node name="Peg36" parent="." instance=ExtResource("1_htcsp")]
+position = Vector2(410, 386)
+
+[node name="Peg37" parent="." instance=ExtResource("1_htcsp")]
+position = Vector2(611, 415)
+
+[node name="Peg38" parent="." instance=ExtResource("1_htcsp")]
+position = Vector2(655, 415)
+
+[node name="Peg39" parent="." instance=ExtResource("1_htcsp")]
+position = Vector2(699, 414)
+
+[node name="Peg40" parent="." instance=ExtResource("1_htcsp")]
+position = Vector2(743, 414)
+
+[node name="Peg41" parent="." instance=ExtResource("1_htcsp")]
+position = Vector2(566, 415)
+
+[node name="Peg42" parent="." instance=ExtResource("1_htcsp")]
+position = Vector2(521, 415)
+
+[node name="Peg43" parent="." instance=ExtResource("1_htcsp")]
+position = Vector2(476, 415)
+
+[node name="Peg44" parent="." instance=ExtResource("1_htcsp")]
+position = Vector2(431, 415)
+
+[node name="Peg45" parent="." instance=ExtResource("1_htcsp")]
+position = Vector2(386, 415)
+
+[node name="Peg46" parent="." instance=ExtResource("1_htcsp")]
+position = Vector2(635, 441)
+
+[node name="Peg47" parent="." instance=ExtResource("1_htcsp")]
+position = Vector2(679, 441)
+
+[node name="Peg48" parent="." instance=ExtResource("1_htcsp")]
+position = Vector2(723, 440)
+
+[node name="Peg49" parent="." instance=ExtResource("1_htcsp")]
+position = Vector2(767, 440)
+
+[node name="Peg56" parent="." instance=ExtResource("1_htcsp")]
+position = Vector2(632, 219)
+
+[node name="Peg57" parent="." instance=ExtResource("1_htcsp")]
+position = Vector2(654, 250)
+
+[node name="Peg58" parent="." instance=ExtResource("1_htcsp")]
+position = Vector2(676, 275)
+
+[node name="Peg59" parent="." instance=ExtResource("1_htcsp")]
+position = Vector2(698, 305)
+
+[node name="Peg60" parent="." instance=ExtResource("1_htcsp")]
+position = Vector2(722, 330)
+
+[node name="Peg61" parent="." instance=ExtResource("1_htcsp")]
+position = Vector2(742, 359)
+
+[node name="Peg62" parent="." instance=ExtResource("1_htcsp")]
+position = Vector2(766, 385)
+
+[node name="Peg63" parent="." instance=ExtResource("1_htcsp")]
+position = Vector2(787, 414)
+
+[node name="Peg64" parent="." instance=ExtResource("1_htcsp")]
+position = Vector2(811, 440)
+
+[node name="Peg50" parent="." instance=ExtResource("1_htcsp")]
+position = Vector2(590, 441)
+
+[node name="Peg51" parent="." instance=ExtResource("1_htcsp")]
+position = Vector2(545, 441)
+
+[node name="Peg52" parent="." instance=ExtResource("1_htcsp")]
+position = Vector2(500, 441)
+
+[node name="Peg53" parent="." instance=ExtResource("1_htcsp")]
+position = Vector2(455, 441)
+
+[node name="Peg54" parent="." instance=ExtResource("1_htcsp")]
+position = Vector2(410, 441)
+
+[node name="Peg55" parent="." instance=ExtResource("1_htcsp")]
+position = Vector2(365, 441)

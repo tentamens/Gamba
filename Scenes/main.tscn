@@ -1,0 +1,716 @@
+[gd_scene load_steps=25 format=3 uid="uid://dfk7gsune1uo4"]
+
+[ext_resource type="Script" path="res://Scenes/main.gd" id="1_egwrh"]
+[ext_resource type="PackedScene" uid="uid://gr4w0fpbvorr" path="res://Scenes/UI/Pegs.tscn" id="3_a77dj"]
+[ext_resource type="Script" path="res://Scenes/Scripts/Mines.gd" id="4_xlohg"]
+[ext_resource type="StyleBox" uid="uid://dcbwfc71h40fy" path="res://MISC/styles/minesBtnNormal.tres" id="5_b5es5"]
+[ext_resource type="StyleBox" uid="uid://blv3y1m6cvdys" path="res://MISC/styles/mineBtnHover.tres" id="6_mdwc5"]
+[ext_resource type="StyleBox" uid="uid://l1qntrid0ilt" path="res://MISC/styles/mineBtnDisabled.tres" id="7_84lab"]
+[ext_resource type="Script" path="res://Scenes/UI/Score.gd" id="7_druru"]
+[ext_resource type="Script" path="res://Scenes/Scripts/numberRush.gd" id="8_naiul"]
+[ext_resource type="StyleBox" uid="uid://dqmb2yav64yiu" path="res://MISC/styles/buttonNormal.tres" id="9_8n0wq"]
+[ext_resource type="StyleBox" uid="uid://cfmjdp4sjf233" path="res://MISC/styles/buttonPressed.tres" id="10_8mf01"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7ieyy"]
+bg_color = Color(0.262745, 0.298039, 0.368627, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_y1h1y"]
+bg_color = Color(0.0431373, 0.0431373, 0.0431373, 0.92549)
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+corner_detail = 11
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_u2i8f"]
+bg_color = Color(0.219608, 0.227451, 0.227451, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.360784, 0.403922, 0.494118, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+shadow_size = 5
+shadow_offset = Vector2(3.603, 3.611)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_elyya"]
+bg_color = Color(0.121569, 0.12549, 0.12549, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.360784, 0.403922, 0.494118, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+shadow_size = 8
+shadow_offset = Vector2(7.711, 6.199)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c43cm"]
+bg_color = Color(0.180392, 0.203922, 0.25098, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_detail = 11
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4ibyy"]
+bg_color = Color(0.231373, 0.258824, 0.321569, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nao6i"]
+bg_color = Color(0.258824, 0.262745, 0.262745, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.360784, 0.403922, 0.494118, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+shadow_size = 5
+shadow_offset = Vector2(4.682, 4.339)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yfpn5"]
+bg_color = Color(0.219608, 0.227451, 0.227451, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.360784, 0.403922, 0.494118, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+shadow_size = 5
+shadow_offset = Vector2(4.682, 4.339)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cr8g2"]
+bg_color = Color(0, 0.745098, 0.0980392, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+shadow_size = 8
+shadow_offset = Vector2(7.847, 6.65)
+anti_aliasing_size = 0.718
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pn8mt"]
+bg_color = Color(0, 0.803922, 0.109804, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+shadow_size = 8
+shadow_offset = Vector2(7.847, 6.65)
+anti_aliasing_size = 0.718
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mms7f"]
+bg_color = Color(0, 0.619608, 0.0745098, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+shadow_size = 8
+shadow_offset = Vector2(7.847, 6.65)
+anti_aliasing_size = 0.718
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hclt2"]
+bg_color = Color(0.12549, 0.14902, 0.196078, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d3v6r"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0.729412, 0.929412, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gcyky"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0.729412, 0.929412, 1)
+
+[node name="main" type="Node2D"]
+script = ExtResource("1_egwrh")
+
+[node name="Mines" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 1150.0
+offset_right = 1150.0
+scale = Vector2(1.012, 1.012)
+script = ExtResource("4_xlohg")
+
+[node name="Panel" type="Panel" parent="Mines"]
+layout_mode = 0
+offset_left = 2.0
+offset_right = 1150.0
+offset_bottom = 649.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_7ieyy")
+metadata/_edit_use_anchors_ = true
+
+[node name="Panel2" type="Panel" parent="Mines"]
+layout_mode = 0
+offset_left = 152.0
+offset_top = 502.0
+offset_right = 1042.0
+offset_bottom = 632.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_y1h1y")
+
+[node name="Sprite2D" type="Sprite2D" parent="Mines"]
+position = Vector2(356, 184)
+
+[node name="TextureButton" type="TextureButton" parent="Mines"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="1" type="Button" parent="Mines"]
+layout_mode = 0
+offset_left = 303.0
+offset_top = 133.0
+offset_right = 408.0
+offset_bottom = 238.0
+pivot_offset = Vector2(56.067, 50.485)
+focus_mode = 0
+theme_override_styles/normal = ExtResource("5_b5es5")
+theme_override_styles/hover = ExtResource("6_mdwc5")
+theme_override_styles/disabled = ExtResource("7_84lab")
+theme_override_styles/focus = ExtResource("7_84lab")
+
+[node name="2" type="Button" parent="Mines"]
+layout_mode = 0
+offset_left = 422.0
+offset_top = 134.0
+offset_right = 527.0
+offset_bottom = 239.0
+focus_mode = 0
+theme_override_styles/normal = ExtResource("5_b5es5")
+theme_override_styles/hover = ExtResource("6_mdwc5")
+theme_override_styles/disabled = ExtResource("7_84lab")
+theme_override_styles/focus = ExtResource("7_84lab")
+
+[node name="3" type="Button" parent="Mines"]
+layout_mode = 0
+offset_left = 545.0
+offset_top = 134.0
+offset_right = 650.0
+offset_bottom = 239.0
+focus_mode = 0
+theme_override_styles/normal = ExtResource("5_b5es5")
+theme_override_styles/hover = ExtResource("6_mdwc5")
+theme_override_styles/disabled = ExtResource("7_84lab")
+theme_override_styles/focus = ExtResource("7_84lab")
+
+[node name="4" type="Button" parent="Mines"]
+layout_mode = 0
+offset_left = 669.0
+offset_top = 134.0
+offset_right = 774.0
+offset_bottom = 239.0
+focus_mode = 0
+theme_override_styles/normal = ExtResource("5_b5es5")
+theme_override_styles/hover = ExtResource("6_mdwc5")
+theme_override_styles/disabled = ExtResource("7_84lab")
+theme_override_styles/focus = ExtResource("7_84lab")
+
+[node name="5" type="Button" parent="Mines"]
+layout_mode = 0
+offset_left = 792.0
+offset_top = 134.0
+offset_right = 897.0
+offset_bottom = 239.0
+focus_mode = 0
+theme_override_styles/normal = ExtResource("5_b5es5")
+theme_override_styles/hover = ExtResource("6_mdwc5")
+theme_override_styles/disabled = ExtResource("7_84lab")
+theme_override_styles/focus = ExtResource("7_84lab")
+
+[node name="6" type="Button" parent="Mines"]
+layout_mode = 0
+offset_left = 792.0
+offset_top = 254.0
+offset_right = 897.0
+offset_bottom = 359.0
+focus_mode = 0
+theme_override_styles/normal = ExtResource("5_b5es5")
+theme_override_styles/hover = ExtResource("6_mdwc5")
+theme_override_styles/disabled = ExtResource("7_84lab")
+theme_override_styles/focus = ExtResource("7_84lab")
+
+[node name="7" type="Button" parent="Mines"]
+layout_mode = 0
+offset_left = 669.0
+offset_top = 254.0
+offset_right = 774.0
+offset_bottom = 359.0
+focus_mode = 0
+theme_override_styles/normal = ExtResource("5_b5es5")
+theme_override_styles/hover = ExtResource("6_mdwc5")
+theme_override_styles/disabled = ExtResource("7_84lab")
+theme_override_styles/focus = ExtResource("7_84lab")
+
+[node name="8" type="Button" parent="Mines"]
+layout_mode = 0
+offset_left = 543.0
+offset_top = 254.0
+offset_right = 648.0
+offset_bottom = 359.0
+focus_mode = 0
+theme_override_styles/normal = ExtResource("5_b5es5")
+theme_override_styles/hover = ExtResource("6_mdwc5")
+theme_override_styles/disabled = ExtResource("7_84lab")
+theme_override_styles/focus = ExtResource("7_84lab")
+
+[node name="9" type="Button" parent="Mines"]
+layout_mode = 0
+offset_left = 422.0
+offset_top = 254.0
+offset_right = 527.0
+offset_bottom = 359.0
+focus_mode = 0
+theme_override_styles/normal = ExtResource("5_b5es5")
+theme_override_styles/hover = ExtResource("6_mdwc5")
+theme_override_styles/disabled = ExtResource("7_84lab")
+theme_override_styles/focus = ExtResource("7_84lab")
+
+[node name="10" type="Button" parent="Mines"]
+layout_mode = 0
+offset_left = 303.0
+offset_top = 254.0
+offset_right = 408.0
+offset_bottom = 359.0
+focus_mode = 0
+theme_override_styles/normal = ExtResource("5_b5es5")
+theme_override_styles/hover = ExtResource("6_mdwc5")
+theme_override_styles/disabled = ExtResource("7_84lab")
+theme_override_styles/focus = ExtResource("7_84lab")
+
+[node name="11" type="Button" parent="Mines"]
+layout_mode = 0
+offset_left = 792.0
+offset_top = 375.0
+offset_right = 897.0
+offset_bottom = 480.0
+focus_mode = 0
+theme_override_styles/normal = ExtResource("5_b5es5")
+theme_override_styles/hover = ExtResource("6_mdwc5")
+theme_override_styles/disabled = ExtResource("7_84lab")
+theme_override_styles/focus = ExtResource("7_84lab")
+
+[node name="12" type="Button" parent="Mines"]
+layout_mode = 0
+offset_left = 669.0
+offset_top = 375.0
+offset_right = 774.0
+offset_bottom = 480.0
+focus_mode = 0
+theme_override_styles/normal = ExtResource("5_b5es5")
+theme_override_styles/hover = ExtResource("6_mdwc5")
+theme_override_styles/disabled = ExtResource("7_84lab")
+theme_override_styles/focus = ExtResource("7_84lab")
+
+[node name="13" type="Button" parent="Mines"]
+layout_mode = 0
+offset_left = 543.0
+offset_top = 375.0
+offset_right = 648.0
+offset_bottom = 480.0
+focus_mode = 0
+theme_override_styles/normal = ExtResource("5_b5es5")
+theme_override_styles/hover = ExtResource("6_mdwc5")
+theme_override_styles/disabled = ExtResource("7_84lab")
+theme_override_styles/focus = ExtResource("7_84lab")
+
+[node name="14" type="Button" parent="Mines"]
+layout_mode = 0
+offset_left = 422.0
+offset_top = 375.0
+offset_right = 527.0
+offset_bottom = 480.0
+focus_mode = 0
+theme_override_styles/normal = ExtResource("5_b5es5")
+theme_override_styles/hover = ExtResource("6_mdwc5")
+theme_override_styles/disabled = ExtResource("7_84lab")
+theme_override_styles/focus = ExtResource("7_84lab")
+
+[node name="15" type="Button" parent="Mines"]
+layout_mode = 0
+offset_left = 303.0
+offset_top = 375.0
+offset_right = 408.0
+offset_bottom = 480.0
+focus_mode = 0
+theme_override_styles/normal = ExtResource("5_b5es5")
+theme_override_styles/hover = ExtResource("6_mdwc5")
+theme_override_styles/disabled = ExtResource("7_84lab")
+theme_override_styles/focus = ExtResource("7_84lab")
+
+[node name="UI" parent="Mines" instance=ExtResource("3_a77dj")]
+
+[node name="control" parent="Mines/UI" index="0"]
+metadata/_edit_use_anchors_ = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Mines/UI"]
+
+[node name="Score" type="LineEdit" parent="Mines/UI/CanvasLayer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -558.0
+offset_top = -259.0
+offset_right = -354.0
+offset_bottom = -223.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_uneditable_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 23
+theme_override_styles/normal = SubResource("StyleBoxFlat_u2i8f")
+theme_override_styles/focus = SubResource("StyleBoxFlat_u2i8f")
+theme_override_styles/read_only = SubResource("StyleBoxFlat_u2i8f")
+editable = false
+selecting_enabled = false
+script = ExtResource("7_druru")
+metadata/_edit_use_anchors_ = true
+
+[node name="gain" type="Label" parent="Mines/UI/CanvasLayer"]
+modulate = Color(1, 1, 1, 0)
+offset_left = 198.0
+offset_top = -24.0
+offset_right = 490.0
+offset_bottom = 53.0
+theme_override_colors/font_color = Color(0.443137, 1, 0.14902, 1)
+theme_override_font_sizes/font_size = 54
+text = "+11"
+horizontal_alignment = 2
+
+[node name="lose" type="Label" parent="Mines/UI/CanvasLayer"]
+visible = false
+offset_left = 199.0
+offset_top = 2.0
+offset_right = 491.0
+offset_bottom = 79.0
+theme_override_colors/font_color = Color(0.901961, 0, 0.137255, 1)
+theme_override_font_sizes/font_size = 54
+text = "+11"
+horizontal_alignment = 2
+
+[node name="ScoreLabel" type="Label" parent="Mines/UI/CanvasLayer"]
+anchors_preset = -1
+anchor_top = -0.0277778
+anchor_bottom = -0.0277778
+offset_left = 19.0
+offset_top = 64.0
+offset_right = 105.0
+offset_bottom = 94.0
+theme_override_colors/font_color = Color(0.584314, 0.631373, 0.721569, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 16
+text = "Score"
+metadata/_edit_use_anchors_ = true
+
+[node name="loseDelay" type="Timer" parent="Mines"]
+one_shot = true
+
+[node name="cashOut" type="Button" parent="Mines"]
+layout_mode = 0
+offset_left = 738.0
+offset_top = 526.0
+offset_right = 967.0
+offset_bottom = 605.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 35
+theme_override_styles/normal = SubResource("StyleBoxFlat_elyya")
+text = "Cash Out"
+
+[node name="numberRush" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1148.0
+offset_bottom = 643.0
+script = ExtResource("8_naiul")
+
+[node name="Panel" type="Panel" parent="numberRush"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 257.0
+offset_right = 26.0
+offset_bottom = -61.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.11447, 1.11447)
+theme_override_styles/panel = SubResource("StyleBoxFlat_7ieyy")
+
+[node name="leftSidePanel" type="Panel" parent="numberRush"]
+layout_mode = 0
+offset_left = -1.0
+offset_top = -16.0
+offset_right = 257.0
+offset_bottom = 664.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_c43cm")
+
+[node name="bottomPanel" type="Panel" parent="numberRush"]
+layout_mode = 0
+offset_left = 1155.0
+offset_top = 488.0
+offset_right = 1330.0
+offset_bottom = 1392.0
+rotation = 1.57079
+theme_override_styles/panel = SubResource("StyleBoxFlat_c43cm")
+
+[node name="Multiplyer" type="Label" parent="numberRush"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -62.0
+offset_top = -185.5
+offset_right = 552.0
+offset_bottom = 140.5
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.630847, 0.630847)
+theme_override_constants/outline_size = 3
+theme_override_font_sizes/font_size = 236
+text = "1.00x"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+text_direction = 3
+
+[node name="bettingBackground" type="Panel" parent="numberRush"]
+layout_mode = 0
+offset_left = 283.0
+offset_top = 520.0
+offset_right = 1073.0
+offset_bottom = 626.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_4ibyy")
+
+[node name="UI" type="Node" parent="numberRush"]
+
+[node name="BetAmount" type="LineEdit" parent="numberRush/UI"]
+offset_left = 18.0
+offset_top = 137.0
+offset_right = 221.0
+offset_bottom = 172.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+focus_mode = 1
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_placeholder_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 22
+theme_override_styles/normal = ExtResource("9_8n0wq")
+theme_override_styles/focus = ExtResource("9_8n0wq")
+theme_override_styles/read_only = ExtResource("9_8n0wq")
+
+[node name="PercentageButtonContainer" type="HBoxContainer" parent="numberRush/UI/BetAmount"]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 45.0
+offset_right = 205.0
+offset_bottom = 79.0
+theme_override_constants/separation = 8
+
+[node name="halfButton" type="Button" parent="numberRush/UI/BetAmount/PercentageButtonContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+theme_override_styles/normal = ExtResource("9_8n0wq")
+theme_override_styles/hover = SubResource("StyleBoxFlat_nao6i")
+theme_override_styles/pressed = ExtResource("10_8mf01")
+theme_override_styles/disabled = ExtResource("9_8n0wq")
+theme_override_styles/focus = SubResource("StyleBoxFlat_yfpn5")
+text = "1/2"
+
+[node name="threeFourthButton" type="Button" parent="numberRush/UI/BetAmount/PercentageButtonContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+theme_override_styles/normal = ExtResource("9_8n0wq")
+theme_override_styles/hover = SubResource("StyleBoxFlat_nao6i")
+theme_override_styles/pressed = ExtResource("10_8mf01")
+theme_override_styles/disabled = ExtResource("9_8n0wq")
+text = "3/4"
+
+[node name="allButton" type="Button" parent="numberRush/UI/BetAmount/PercentageButtonContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+theme_override_styles/normal = ExtResource("9_8n0wq")
+theme_override_styles/hover = SubResource("StyleBoxFlat_nao6i")
+theme_override_styles/pressed = ExtResource("10_8mf01")
+theme_override_styles/disabled = ExtResource("9_8n0wq")
+text = "All"
+
+[node name="BetLabel" type="Label" parent="numberRush/UI"]
+anchors_preset = -1
+anchor_top = -0.0277778
+anchor_bottom = -0.0277778
+offset_left = 19.0
+offset_top = 134.0
+offset_right = 105.0
+offset_bottom = 164.0
+theme_override_colors/font_color = Color(0.584314, 0.631373, 0.721569, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 16
+text = "Amount"
+metadata/_edit_use_anchors_ = true
+
+[node name="BetButton" type="Button" parent="numberRush/UI"]
+offset_left = 372.0
+offset_top = 541.0
+offset_right = 729.0
+offset_bottom = 607.0
+size_flags_vertical = 3
+focus_mode = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_cr8g2")
+theme_override_styles/hover = SubResource("StyleBoxFlat_pn8mt")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_mms7f")
+action_mode = 0
+text = "Bet"
+
+[node name="CurrentBets" type="Node" parent="numberRush/UI"]
+
+[node name="currentWinningBackground" type="Panel" parent="numberRush/UI/CurrentBets"]
+offset_left = 19.0
+offset_top = 261.0
+offset_right = 228.0
+offset_bottom = 617.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_hclt2")
+
+[node name="currentWinningScrolk" type="ScrollContainer" parent="numberRush/UI/CurrentBets"]
+offset_left = 38.0
+offset_top = 276.0
+offset_right = 217.0
+offset_bottom = 599.0
+
+[node name="labelHolder" type="VBoxContainer" parent="numberRush/UI/CurrentBets/currentWinningScrolk"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="numberRush/UI/CurrentBets/currentWinningScrolk/labelHolder"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.196078, 0.862745, 0, 1)
+text = "anonymous : +819"
+
+[node name="Label2" type="Label" parent="numberRush/UI/CurrentBets/currentWinningScrolk/labelHolder"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.196078, 0.862745, 0, 1)
+text = "anonymous : +425"
+
+[node name="Label3" type="Label" parent="numberRush/UI/CurrentBets/currentWinningScrolk/labelHolder"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+text = "anonymous : -112"
+
+[node name="Label4" type="Label" parent="numberRush/UI/CurrentBets/currentWinningScrolk/labelHolder"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.196078, 0.862745, 0, 1)
+text = "anonymous : +152"
+
+[node name="winningLabel" type="Label" parent="numberRush/UI/CurrentBets"]
+offset_left = 18.0
+offset_top = 240.0
+offset_right = 154.0
+offset_bottom = 266.0
+theme_override_colors/font_color = Color(0.584314, 0.631373, 0.721569, 1)
+text = "Current Winnings"
+
+[node name="cashOut" type="Button" parent="numberRush"]
+layout_mode = 0
+offset_left = 768.0
+offset_top = 541.0
+offset_right = 974.0
+offset_bottom = 607.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 35
+theme_override_styles/normal = SubResource("StyleBoxFlat_elyya")
+text = "Cash Out"
+
+[node name="countUpDelay" type="Timer" parent="numberRush"]
+wait_time = 0.05
+
+[node name="Panel4" type="Panel" parent="numberRush"]
+layout_mode = 0
+offset_left = -4.0
+offset_top = -46.0
+offset_right = 36.0
+offset_bottom = -6.0
+metadata/_edit_use_anchors_ = true
+
+[node name="movementButtons" type="CanvasLayer" parent="."]
+
+[node name="moveLeft" type="Button" parent="movementButtons"]
+offset_left = 1115.0
+offset_top = -147.0
+offset_right = 1148.0
+offset_bottom = -42.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_d3v6r")
+text = ">"
+
+[node name="moveRight" type="Button" parent="movementButtons"]
+offset_left = 1114.0
+offset_top = -258.0
+offset_right = 1148.0
+offset_bottom = -149.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 53
+theme_override_styles/normal = SubResource("StyleBoxFlat_gcyky")
+text = "<"
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(574, 324)
+
+[connection signal="pressed" from="Mines/1" to="Mines" method="_on_buttonPressed" binds= ["1"]]
+[connection signal="pressed" from="Mines/2" to="Mines" method="_on_buttonPressed" binds= ["2"]]
+[connection signal="pressed" from="Mines/3" to="Mines" method="_on_buttonPressed" binds= ["3"]]
+[connection signal="pressed" from="Mines/4" to="Mines" method="_on_buttonPressed" binds= ["4"]]
+[connection signal="pressed" from="Mines/5" to="Mines" method="_on_buttonPressed" binds= ["5"]]
+[connection signal="pressed" from="Mines/6" to="Mines" method="_on_buttonPressed" binds= ["6"]]
+[connection signal="pressed" from="Mines/7" to="Mines" method="_on_buttonPressed" binds= ["7"]]
+[connection signal="pressed" from="Mines/8" to="Mines" method="_on_buttonPressed" binds= ["8"]]
+[connection signal="pressed" from="Mines/9" to="Mines" method="_on_buttonPressed" binds= ["9"]]
+[connection signal="pressed" from="Mines/10" to="Mines" method="_on_buttonPressed" binds= ["10"]]
+[connection signal="pressed" from="Mines/11" to="Mines" method="_on_buttonPressed" binds= ["11"]]
+[connection signal="pressed" from="Mines/12" to="Mines" method="_on_buttonPressed" binds= ["12"]]
+[connection signal="pressed" from="Mines/13" to="Mines" method="_on_buttonPressed" binds= ["13"]]
+[connection signal="pressed" from="Mines/14" to="Mines" method="_on_buttonPressed" binds= ["14"]]
+[connection signal="pressed" from="Mines/15" to="Mines" method="_on_buttonPressed" binds= ["15"]]
+[connection signal="text_changed" from="Mines/UI/control/Control/HBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer2/Bet" to="Mines" method="_on_bet_text_changed"]
+[connection signal="pressed" from="Mines/UI/control/Control/HBoxContainer/HBoxContainer/HBoxContainer/VBoxContainer/Gamble" to="Mines" method="_on_gamble_pressed"]
+[connection signal="timeout" from="Mines/loseDelay" to="Mines" method="_on_lose_delay_timeout"]
+[connection signal="pressed" from="Mines/cashOut" to="Mines" method="_on_cash_out_pressed"]
+[connection signal="text_changed" from="numberRush/UI/BetAmount" to="numberRush" method="_on_bet_amount_text_changed"]
+[connection signal="pressed" from="numberRush/UI/BetButton" to="numberRush" method="_on_bet_button_pressed"]
+[connection signal="pressed" from="numberRush/cashOut" to="Mines" method="_on_cash_out_pressed"]
+[connection signal="pressed" from="movementButtons/moveLeft" to="." method="moveLeft"]
+[connection signal="pressed" from="movementButtons/moveRight" to="." method="moveRight"]
+
+[editable path="Mines/UI"]
