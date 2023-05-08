@@ -21,7 +21,12 @@ func join_as_client() -> void:
 	var client_id: int = multiplayer.get_unique_id()
 	var player_name: String = "Player"
 	rpc_id(1, "serverConnectPlayer", client_id, player_name, )
-	
+
+
+@rpc("any_peer")
+func serverConnectPlayer(clientID: int, playerName: String) -> void:
+	pass
+
 
 func calcPegValue(betValue, Zone, num):
 	
@@ -33,7 +38,7 @@ func calcPegValue(betValue, Zone, num):
 
 
 @rpc("any_peer", "reliable")
-func calculatePegValue(betValue, Zone, client_id, num):
+func calculatePegValue(Zone, client_id, num):
 	pass
 
 
@@ -48,12 +53,10 @@ func updateScore(score):
 	Score.score = score
 
 
-@rpc("any_peer")
-func serverConnectPlayer(clientID: int, playerName: String) -> void:
-	pass
 
 
-@rpc
+
+@rpc("reliable")
 func createPlayerNode():
 #	generalDataRetrieve()
 	print("connction to Server established")
@@ -137,13 +140,13 @@ func numberRushBetRequestSend(currentBet):
 	rpc_id(1, "numberRushBetRequestRecieve", currentBet)
 
 
-@rpc("reliable")
+@rpc("any_peer","reliable")
 func numberRushBetRequestRecieve(currentBet):
 	pass
 
 
 func numberRushUpdateProccessSend(currentMultiple):
-	rpc_id(1, "numberRushBetProccessRecieve", currentMultiple)
+	rpc_id(1, "numberRushUpdateProccessReceive", currentMultiple)
 
 
 @rpc("any_peer", "reliable")
@@ -154,6 +157,7 @@ func numberRushUpdateProccessReceive(currentMultiple):
 @rpc( "reliable")
 func numberRushCrash(score):
 	Score.score = score
+	numberRushNode.numberRushBroke()
 
 
 func numberRushCashOut(currentMultiple):
@@ -167,6 +171,10 @@ func NumberRushCashOutRecieve(currentMultiple):
 @rpc("reliable")
 func numberRushWin(score):
 	Score.score = score
+	numberRushNode.numberRushWin()
 
 
+@rpc("reliable")
+func numberRushBetRequestReturn():
+	numberRushNode.countDownStart()
 

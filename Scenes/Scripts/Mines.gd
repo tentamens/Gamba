@@ -1,7 +1,7 @@
 extends Control
 
 
-var currentBet = 0
+@onready var currentBet = $".".currentBet
 
 @onready var normalStyle = load("res://MISC/styles/minesBtnNormal.tres")
 @onready var disabledStyle = load("res://MISC/styles/mineBtnDisabled.tres")
@@ -67,3 +67,7 @@ func _on_cash_out_pressed():
 	
 	Server.cashOutMinesSend()
 	$loseDelay.start()
+
+
+func _on_bet_button_pressed():
+	pass # Replace with function body.

@@ -29,7 +29,7 @@ func _on_move_left_pressed():
 	$Camera2D.position.x = 1727
 
 
-func _on_bet_text_changed(new_text):
+func _on_bet_amount_text_changed(new_text):
 	if new_text == "":
 			currentBet = 0
 			return
@@ -103,6 +103,9 @@ func _on_bet_text_changed(new_text):
 #func _on_gamble_pressed():
 #
 #	Server.requestBallSpawn(currentBet)
+
+
+
 
 
 
