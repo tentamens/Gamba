@@ -55,3 +55,10 @@ func _on_bet_button_pressed():
 
 func _on_cash_out_pressed():
 	Server.numberRushCashOut(currentMultipler)
+
+
+func _on_bet_amount_text_changed(new_text):
+	if new_text == "":
+			currentBet = 0
+			return
+	currentBet = int(new_text)

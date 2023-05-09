@@ -1,0 +1,430 @@
+[gd_scene load_steps=16 format=3 uid="uid://tl8rxasf1oac"]
+
+[ext_resource type="Script" path="res://Scenes/Scripts/numberRush.gd" id="1_4s3hf"]
+[ext_resource type="StyleBox" uid="uid://dqmb2yav64yiu" path="res://MISC/styles/buttonNormal.tres" id="2_ef756"]
+[ext_resource type="StyleBox" uid="uid://cfmjdp4sjf233" path="res://MISC/styles/buttonPressed.tres" id="3_e4pxl"]
+[ext_resource type="Script" path="res://Scenes/UI/Score.gd" id="4_1gtu2"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7ieyy"]
+bg_color = Color(0.262745, 0.298039, 0.368627, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c43cm"]
+bg_color = Color(0.180392, 0.203922, 0.25098, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_detail = 11
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4ibyy"]
+bg_color = Color(0.231373, 0.258824, 0.321569, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nao6i"]
+bg_color = Color(0.258824, 0.262745, 0.262745, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.360784, 0.403922, 0.494118, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+shadow_size = 5
+shadow_offset = Vector2(4.682, 4.339)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yfpn5"]
+bg_color = Color(0.219608, 0.227451, 0.227451, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.360784, 0.403922, 0.494118, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+shadow_size = 5
+shadow_offset = Vector2(4.682, 4.339)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hclt2"]
+bg_color = Color(0.12549, 0.14902, 0.196078, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_u2i8f"]
+bg_color = Color(0.219608, 0.227451, 0.227451, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.360784, 0.403922, 0.494118, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+shadow_size = 5
+shadow_offset = Vector2(3.603, 3.611)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_elyya"]
+bg_color = Color(0.121569, 0.12549, 0.12549, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.360784, 0.403922, 0.494118, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+shadow_size = 8
+shadow_offset = Vector2(7.711, 6.199)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cr8g2"]
+bg_color = Color(0, 0.745098, 0.0980392, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+shadow_size = 8
+shadow_offset = Vector2(7.847, 6.65)
+anti_aliasing_size = 0.718
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pn8mt"]
+bg_color = Color(0, 0.803922, 0.109804, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+shadow_size = 8
+shadow_offset = Vector2(7.847, 6.65)
+anti_aliasing_size = 0.718
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mms7f"]
+bg_color = Color(0, 0.619608, 0.0745098, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+shadow_size = 8
+shadow_offset = Vector2(7.847, 6.65)
+anti_aliasing_size = 0.718
+
+[node name="numberRush" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -1147.0
+offset_right = 1.0
+offset_bottom = 643.0
+script = ExtResource("1_4s3hf")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 257.0
+offset_right = -89.0
+offset_bottom = -61.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.11447, 1.11447)
+theme_override_styles/panel = SubResource("StyleBoxFlat_7ieyy")
+
+[node name="leftSidePanel" type="Panel" parent="."]
+layout_mode = 0
+offset_left = -1.0
+offset_top = -16.0
+offset_right = 257.0
+offset_bottom = 664.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_c43cm")
+
+[node name="bottomPanel" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 1155.0
+offset_top = 488.0
+offset_right = 1330.0
+offset_bottom = 1392.0
+rotation = 1.57079
+theme_override_styles/panel = SubResource("StyleBoxFlat_c43cm")
+
+[node name="Multiplyer" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -62.0
+offset_top = -185.5
+offset_right = 552.0
+offset_bottom = 140.5
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.630847, 0.630847)
+theme_override_constants/outline_size = 3
+theme_override_font_sizes/font_size = 236
+text = "1.00x"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+text_direction = 3
+
+[node name="bettingBackground" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 283.0
+offset_top = 520.0
+offset_right = 1073.0
+offset_bottom = 626.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_4ibyy")
+
+[node name="UI" type="Node2D" parent="."]
+
+[node name="BetAmount" type="LineEdit" parent="UI"]
+offset_left = 18.0
+offset_top = 137.0
+offset_right = 221.0
+offset_bottom = 172.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+focus_mode = 1
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_placeholder_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 22
+theme_override_styles/normal = ExtResource("2_ef756")
+theme_override_styles/focus = ExtResource("2_ef756")
+theme_override_styles/read_only = ExtResource("2_ef756")
+
+[node name="PercentageButtonContainer" type="HBoxContainer" parent="UI/BetAmount"]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 45.0
+offset_right = 205.0
+offset_bottom = 79.0
+theme_override_constants/separation = 8
+
+[node name="halfButton" type="Button" parent="UI/BetAmount/PercentageButtonContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+theme_override_styles/normal = ExtResource("2_ef756")
+theme_override_styles/hover = SubResource("StyleBoxFlat_nao6i")
+theme_override_styles/pressed = ExtResource("3_e4pxl")
+theme_override_styles/disabled = ExtResource("2_ef756")
+theme_override_styles/focus = SubResource("StyleBoxFlat_yfpn5")
+text = "1/2"
+
+[node name="threeFourthButton" type="Button" parent="UI/BetAmount/PercentageButtonContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+theme_override_styles/normal = ExtResource("2_ef756")
+theme_override_styles/hover = SubResource("StyleBoxFlat_nao6i")
+theme_override_styles/pressed = ExtResource("3_e4pxl")
+theme_override_styles/disabled = ExtResource("2_ef756")
+text = "3/4"
+
+[node name="allButton" type="Button" parent="UI/BetAmount/PercentageButtonContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+theme_override_styles/normal = ExtResource("2_ef756")
+theme_override_styles/hover = SubResource("StyleBoxFlat_nao6i")
+theme_override_styles/pressed = ExtResource("3_e4pxl")
+theme_override_styles/disabled = ExtResource("2_ef756")
+text = "All"
+
+[node name="BetLabel" type="Label" parent="UI"]
+anchors_preset = -1
+anchor_top = -0.0277778
+anchor_bottom = -0.0277778
+offset_left = 18.0
+offset_top = 117.0
+offset_right = 104.0
+offset_bottom = 147.0
+theme_override_colors/font_color = Color(0.584314, 0.631373, 0.721569, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 16
+text = "Amount"
+metadata/_edit_use_anchors_ = true
+
+[node name="CurrentBets" type="Node2D" parent="UI"]
+
+[node name="currentWinningBackground" type="Panel" parent="UI/CurrentBets"]
+offset_left = 19.0
+offset_top = 261.0
+offset_right = 228.0
+offset_bottom = 617.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_hclt2")
+
+[node name="currentWinningScrolk" type="ScrollContainer" parent="UI/CurrentBets"]
+offset_left = 38.0
+offset_top = 276.0
+offset_right = 217.0
+offset_bottom = 599.0
+
+[node name="labelHolder" type="VBoxContainer" parent="UI/CurrentBets/currentWinningScrolk"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="UI/CurrentBets/currentWinningScrolk/labelHolder"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.196078, 0.862745, 0, 1)
+text = "anonymous : +819"
+
+[node name="Label2" type="Label" parent="UI/CurrentBets/currentWinningScrolk/labelHolder"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.196078, 0.862745, 0, 1)
+text = "anonymous : +425"
+
+[node name="Label3" type="Label" parent="UI/CurrentBets/currentWinningScrolk/labelHolder"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+text = "anonymous : -112"
+
+[node name="Label4" type="Label" parent="UI/CurrentBets/currentWinningScrolk/labelHolder"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.196078, 0.862745, 0, 1)
+text = "anonymous : +152"
+
+[node name="winningLabel" type="Label" parent="UI/CurrentBets"]
+offset_left = 18.0
+offset_top = 240.0
+offset_right = 154.0
+offset_bottom = 266.0
+theme_override_colors/font_color = Color(0.584314, 0.631373, 0.721569, 1)
+text = "Current Winnings"
+
+[node name="Score" type="LineEdit" parent="UI"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 18.0
+offset_top = 70.0
+offset_right = 222.0
+offset_bottom = 106.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_uneditable_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 23
+theme_override_styles/normal = SubResource("StyleBoxFlat_u2i8f")
+theme_override_styles/focus = SubResource("StyleBoxFlat_u2i8f")
+theme_override_styles/read_only = SubResource("StyleBoxFlat_u2i8f")
+editable = false
+selecting_enabled = false
+script = ExtResource("4_1gtu2")
+
+[node name="gain" type="Label" parent="UI"]
+modulate = Color(1, 1, 1, 0)
+offset_left = 1350.38
+offset_top = -24.288
+offset_right = 1642.38
+offset_bottom = 52.712
+theme_override_colors/font_color = Color(0.443137, 1, 0.14902, 1)
+theme_override_font_sizes/font_size = 54
+text = "+11"
+horizontal_alignment = 2
+
+[node name="lose" type="Label" parent="UI"]
+visible = false
+offset_left = 1351.39
+offset_top = 2.024
+offset_right = 1643.39
+offset_bottom = 79.024
+theme_override_colors/font_color = Color(0.901961, 0, 0.137255, 1)
+theme_override_font_sizes/font_size = 54
+text = "+11"
+horizontal_alignment = 2
+
+[node name="ScoreLabel" type="Label" parent="UI"]
+anchors_preset = -1
+anchor_top = -0.0277778
+anchor_bottom = -0.0277778
+offset_left = 18.0001
+offset_top = 40.0
+offset_right = 104.0
+offset_bottom = 70.0
+theme_override_colors/font_color = Color(0.584314, 0.631373, 0.721569, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 16
+text = "Score"
+
+[node name="cashOut" type="Button" parent="."]
+layout_mode = 0
+offset_left = 768.0
+offset_top = 541.0
+offset_right = 974.0
+offset_bottom = 607.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 35
+theme_override_styles/normal = SubResource("StyleBoxFlat_elyya")
+text = "Cash Out"
+
+[node name="countUpDelay" type="Timer" parent="."]
+wait_time = 0.05
+
+[node name="Panel4" type="Panel" parent="."]
+layout_mode = 0
+offset_left = -4.0
+offset_top = -46.0
+offset_right = 36.0
+offset_bottom = -6.0
+metadata/_edit_use_anchors_ = true
+
+[node name="goBack" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1104.0
+offset_top = 5.0
+offset_right = 1196.0
+offset_bottom = 100.0
+scale = Vector2(0.435864, 0.435864)
+focus_mode = 0
+
+[node name="Label" type="Label" parent="goBack"]
+modulate = Color(1, 1, 1, 0.580392)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -40.6714
+offset_top = -78.1388
+offset_right = 53.3286
+offset_bottom = 137.861
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1, 0.63999)
+theme_override_font_sizes/font_size = 149
+text = "x"
+
+[node name="BetButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 371.0
+offset_top = 541.0
+offset_right = 728.0
+offset_bottom = 607.0
+size_flags_vertical = 3
+focus_mode = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_cr8g2")
+theme_override_styles/hover = SubResource("StyleBoxFlat_pn8mt")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_mms7f")
+action_mode = 0
+text = "Bet"
+
+[connection signal="text_changed" from="UI/BetAmount" to="." method="_on_bet_amount_text_changed"]
+[connection signal="pressed" from="cashOut" to="." method="_on_cash_out_pressed"]
+[connection signal="timeout" from="countUpDelay" to="." method="_on_count_up_delay_timeout"]
+[connection signal="pressed" from="BetButton" to="." method="_on_bet_button_pressed"]

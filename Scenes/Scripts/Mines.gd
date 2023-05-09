@@ -1,7 +1,7 @@
 extends Control
 
 
-@onready var currentBet = $".".currentBet
+@onready var currentBet = 0
 
 @onready var normalStyle = load("res://MISC/styles/minesBtnNormal.tres")
 @onready var disabledStyle = load("res://MISC/styles/mineBtnDisabled.tres")
@@ -19,15 +19,7 @@ var colors = [
 func _ready():
 	Server.minesNode = self
 
-func _on_bet_text_changed(new_text):
-	if new_text == "":
-			currentBet = 0
-			return
-	currentBet = int(new_text)
 
-
-func _on_gamble_pressed():
-	Server.betMinesRequest(currentBet)
 
 
 func _on_buttonPressed(extra_arg_0):
@@ -70,4 +62,12 @@ func _on_cash_out_pressed():
 
 
 func _on_bet_button_pressed():
-	pass # Replace with function body.
+	Server.betMinesRequest(currentBet)
+
+
+
+func _on_bet_amount_text_changed(new_text):
+	if new_text == "":
+			currentBet = 0
+			return
+	currentBet = int(new_text)
