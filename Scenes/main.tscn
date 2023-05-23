@@ -50,7 +50,7 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_gcyky")
 text = "<"
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(576, 324)
+position = Vector2(-574, 324)
 
 [connection signal="pressed" from="movementButtons/moveLeft" to="." method="moveLeft"]
 [connection signal="pressed" from="movementButtons/moveRight" to="." method="moveRight"]

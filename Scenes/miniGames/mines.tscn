@@ -496,6 +496,33 @@ theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 16
 text = "Score"
 
+[node name="goBack" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1080.04
+offset_top = 5.0
+offset_right = 1195.04
+offset_bottom = 117.0
+scale = Vector2(0.435864, 0.435864)
+focus_mode = 0
+
+[node name="Label" type="Label" parent="goBack"]
+modulate = Color(1, 1, 1, 0.580392)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -41.0
+offset_top = -78.5
+offset_right = 54.0
+offset_bottom = 166.5
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1, 0.63999)
+theme_override_font_sizes/font_size = 149
+text = "x"
+
 [connection signal="pressed" from="1" to="." method="_on_buttonPressed" binds= ["1"]]
 [connection signal="pressed" from="2" to="." method="_on_buttonPressed" binds= ["2"]]
 [connection signal="pressed" from="3" to="." method="_on_buttonPressed" binds= ["3"]]
@@ -515,3 +542,4 @@ text = "Score"
 [connection signal="pressed" from="BetButton" to="." method="_on_bet_button_pressed"]
 [connection signal="pressed" from="cashOut" to="." method="_on_cash_out_pressed"]
 [connection signal="text_changed" from="BetAmount" to="." method="_on_bet_amount_text_changed"]
+[connection signal="pressed" from="goBack" to="." method="_on_go_back_pressed"]

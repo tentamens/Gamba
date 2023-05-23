@@ -1,0 +1,319 @@
+[gd_scene load_steps=11 format=3 uid="uid://7o4htnbmi2ei"]
+
+[ext_resource type="Script" path="res://Scenes/UI/leaderBoard.gd" id="1_phfi5"]
+[ext_resource type="Script" path="res://Scenes/UI/leaderBoardCashOut.gd" id="1_skd2e"]
+[ext_resource type="StyleBox" uid="uid://dqmb2yav64yiu" path="res://MISC/styles/buttonNormal.tres" id="1_skyan"]
+[ext_resource type="StyleBox" uid="uid://dwogkwmj4yjop" path="res://MISC/styles/GreenButtonNormal.tres" id="2_w8e1p"]
+[ext_resource type="Texture2D" uid="uid://gm34lwousoo" path="res://Sprites/Icons/Mines.PNG" id="4_nidcd"]
+[ext_resource type="Texture2D" uid="uid://b2n6a71ryraje" path="res://Sprites/Icons/NumberRushIcon.png" id="5_5juei"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_exk5a"]
+bg_color = Color(0.196078, 0.219608, 0.270588, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rkwjp"]
+bg_color = Color(0.262745, 0.298039, 0.368627, 1)
+corner_radius_bottom_right = 11
+corner_detail = 17
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i2fp1"]
+bg_color = Color(0.215686, 0.219608, 0.219608, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.360784, 0.403922, 0.494118, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x7ifg"]
+bg_color = Color(0.215686, 0.219608, 0.219608, 1)
+border_color = Color(0.360784, 0.403922, 0.494118, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+shadow_size = 5
+shadow_offset = Vector2(4.682, 4.339)
+
+[node name="leaderBoardCashOut" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_skd2e")
+
+[node name="background" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="Panel" type="Panel" parent="background"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.00862745
+anchor_top = -0.00277778
+anchor_right = 1.00784
+anchor_bottom = 1.01806
+theme_override_styles/panel = SubResource("StyleBoxFlat_exk5a")
+metadata/_edit_use_anchors_ = true
+
+[node name="Panel3" type="Panel" parent="background"]
+layout_mode = 0
+anchor_top = -0.00138889
+anchor_right = 0.672656
+anchor_bottom = 0.734722
+theme_override_styles/panel = SubResource("StyleBoxFlat_rkwjp")
+metadata/_edit_use_anchors_ = true
+
+[node name="rightSideLeaderBoard" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="LineEdit" type="LineEdit" parent="rightSideLeaderBoard"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.739608
+anchor_top = 0.8125
+anchor_right = 0.957647
+anchor_bottom = 0.9
+offset_left = -6.10352e-05
+focus_mode = 0
+theme_override_colors/font_uneditable_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 37
+theme_override_styles/read_only = ExtResource("1_skyan")
+editable = false
+caret_blink = true
+caret_blink_interval = 0.5
+metadata/_edit_use_anchors_ = true
+
+[node name="leaderBoardLabel" type="Label" parent="rightSideLeaderBoard"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.74368
+anchor_top = 0.0208333
+anchor_right = 0.887209
+anchor_bottom = 0.0805556
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.584314, 0.631373, 0.721569, 1)
+theme_override_font_sizes/font_size = 29
+text = "LeaderBoard"
+
+[node name="leaderBoard" type="ScrollContainer" parent="rightSideLeaderBoard"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.739608
+anchor_top = 0.0791667
+anchor_right = 0.957647
+anchor_bottom = 0.740278
+offset_left = -6.10352e-05
+theme_override_styles/panel = SubResource("StyleBoxFlat_i2fp1")
+script = ExtResource("1_phfi5")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="rightSideLeaderBoard/leaderBoard"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="rightSideLeaderBoard"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.740392
+anchor_top = 0.765278
+anchor_right = 0.930196
+anchor_bottom = 0.820833
+theme_override_colors/font_color = Color(0.584314, 0.631373, 0.721569, 1)
+theme_override_font_sizes/font_size = 27
+text = "Projected Position"
+metadata/_edit_use_anchors_ = true
+
+[node name="GameSelect" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Mines" type="Button" parent="GameSelect"]
+top_level = true
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.388235
+anchor_top = 0.0416667
+anchor_right = 0.5521
+anchor_bottom = 0.565195
+offset_right = 31.0723
+offset_bottom = 56.0597
+scale = Vector2(0.870532, 0.870532)
+icon = ExtResource("4_nidcd")
+
+[node name="numberRush" type="TextureButton" parent="GameSelect"]
+top_level = true
+layout_mode = 0
+offset_left = 151.0
+offset_top = 30.0
+offset_right = 736.0
+offset_bottom = 780.0
+scale = Vector2(0.460094, 0.460094)
+texture_normal = ExtResource("5_5juei")
+
+[node name="bottomCashOut" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="cashOutButton" type="Button" parent="bottomCashOut"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.311719
+anchor_top = 0.781944
+anchor_right = 0.698438
+anchor_bottom = 0.952778
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 4
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 46
+theme_override_styles/normal = ExtResource("2_w8e1p")
+text = "Cash Out"
+metadata/_edit_use_anchors_ = true
+
+[node name="currentScore" type="LineEdit" parent="bottomCashOut"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.021875
+anchor_top = 0.820833
+anchor_right = 0.267188
+anchor_bottom = 0.919445
+offset_bottom = -6.10352e-05
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_uneditable_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 41
+theme_override_styles/normal = ExtResource("1_skyan")
+theme_override_styles/read_only = ExtResource("1_skyan")
+editable = false
+caret_blink = true
+caret_blink_interval = 0.5
+metadata/_edit_use_anchors_ = true
+
+[node name="currentScoreLabel" type="Label" parent="bottomCashOut"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.021875
+anchor_top = 0.765278
+anchor_right = 0.15625
+anchor_bottom = 0.831944
+theme_override_colors/font_color = Color(0.584314, 0.631373, 0.721569, 1)
+theme_override_font_sizes/font_size = 32
+text = "Score"
+metadata/_edit_use_anchors_ = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="CashOutUsername" type="Control" parent="CanvasLayer"]
+visible = false
+top_level = true
+clip_children = 2
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="CanvasLayer/CashOutUsername"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="Panel2" type="Panel" parent="CanvasLayer/CashOutUsername"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.371875
+anchor_top = 0.270833
+anchor_right = 0.56875
+anchor_bottom = 0.586111
+theme_override_styles/panel = SubResource("StyleBoxFlat_x7ifg")
+metadata/_edit_use_anchors_ = true
+
+[node name="nameInput" type="LineEdit" parent="CanvasLayer/CashOutUsername"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.389062
+anchor_top = 0.336111
+anchor_right = 0.548437
+anchor_bottom = 0.409722
+offset_top = 1.52588e-05
+theme_override_font_sizes/font_size = 28
+theme_override_styles/normal = ExtResource("1_skyan")
+placeholder_text = "Anonymous"
+max_length = 10
+caret_blink = true
+caret_blink_interval = 0.5
+metadata/_edit_use_anchors_ = true
+
+[node name="NameLabel" type="Label" parent="CanvasLayer/CashOutUsername"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.389062
+anchor_top = 0.302778
+anchor_right = 0.449219
+anchor_bottom = 0.354167
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_font_sizes/font_size = 16
+text = "Name:"
+metadata/_edit_use_anchors_ = true
+
+[node name="confirmButton" type="Button" parent="CanvasLayer/CashOutUsername"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.424219
+anchor_top = 0.445833
+anchor_right = 0.504687
+anchor_bottom = 0.509722
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = ExtResource("2_w8e1p")
+text = "Confirm"
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="CanvasLayer/CashOutUsername"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.373437
+anchor_top = 0.525
+anchor_right = 0.567969
+anchor_bottom = 0.581944
+offset_top = 3.05176e-05
+theme_override_colors/font_color = Color(0.470588, 0.470588, 0.470588, 1)
+theme_override_font_sizes/font_size = 14
+text = "*note override your previous score"
+metadata/_edit_use_anchors_ = true
+
+[connection signal="pressed" from="GameSelect/Mines" to="." method="_on_mines_pressed"]
+[connection signal="pressed" from="GameSelect/numberRush" to="." method="_on_number_rush_pressed"]
+[connection signal="pressed" from="bottomCashOut/cashOutButton" to="." method="_on_cash_out_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/CashOutUsername/confirmButton" to="." method="_on_confirm_button_pressed"]

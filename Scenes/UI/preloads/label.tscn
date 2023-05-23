@@ -1,0 +1,4 @@
+[gd_scene format=3 uid="uid://3m3ns87naxhp"]
+
+[node name="label" type="Label"]
+theme_override_font_sizes/font_size = 17

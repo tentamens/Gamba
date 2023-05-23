@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://ifmjpjys50ha"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jtmbn"]
+bg_color = Color(0.12549, 0.145098, 0.180392, 1)
+corner_radius_top_left = 9
+corner_radius_top_right = 9
+corner_radius_bottom_right = 9
+corner_radius_bottom_left = 9
+
+[node name="LineEdit" type="LineEdit"]
+theme_override_colors/font_uneditable_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 24
+theme_override_styles/read_only = SubResource("StyleBoxFlat_jtmbn")
+alignment = 1
+editable = false
