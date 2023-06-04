@@ -1,0 +1,214 @@
+[gd_scene load_steps=6 format=3 uid="uid://d1badyiywbrrl"]
+
+[ext_resource type="Texture2D" uid="uid://sa8up8vmi0a3" path="res://Sprites/Icons/VisaCard.png" id="1_os3pf"]
+[ext_resource type="Script" path="res://Scenes/UI/Winning.gd" id="1_vyegd"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gei1c"]
+bg_color = Color(0.168627, 0.168627, 0.168627, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ni1gx"]
+bg_color = Color(0.223529, 0.231373, 0.239216, 1)
+corner_radius_top_left = 22
+corner_radius_top_right = 22
+corner_radius_bottom_right = 19
+corner_radius_bottom_left = 19
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wxrsy"]
+bg_color = Color(0.203922, 0.203922, 0.203922, 1)
+
+[node name="Winning" type="Control"]
+custom_minimum_size = Vector2(280.691, 0)
+layout_mode = 3
+anchor_left = -0.00651994
+anchor_right = 0.21277
+anchor_bottom = 0.655556
+offset_left = 8.34552
+offset_right = -8.34552
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_vyegd")
+metadata/_edit_use_anchors_ = true
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_gei1c")
+metadata/_edit_use_anchors_ = true
+
+[node name="Panel2" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.553816
+anchor_right = 1.00313
+anchor_bottom = 1.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_ni1gx")
+metadata/_edit_use_anchors_ = true
+
+[node name="Panel3" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.00356264
+anchor_top = 0.131356
+anchor_right = 1.0011
+anchor_bottom = 0.148305
+theme_override_styles/panel = SubResource("StyleBoxFlat_wxrsy")
+metadata/_edit_use_anchors_ = true
+
+[node name="Panel4" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.00356264
+anchor_top = 0.508475
+anchor_right = 1.0011
+anchor_bottom = 0.525424
+theme_override_styles/panel = SubResource("StyleBoxFlat_wxrsy")
+metadata/_edit_use_anchors_ = true
+
+[node name="Panel5" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.00356264
+anchor_top = 0.699153
+anchor_right = 1.00466
+anchor_bottom = 0.716102
+theme_override_styles/panel = SubResource("StyleBoxFlat_wxrsy")
+metadata/_edit_use_anchors_ = true
+
+[node name="Panel6" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.00356264
+anchor_top = 0.883475
+anchor_right = 1.00466
+anchor_bottom = 0.900424
+theme_override_styles/panel = SubResource("StyleBoxFlat_wxrsy")
+metadata/_edit_use_anchors_ = true
+
+[node name="Win" type="Label" parent="."]
+layout_mode = 2
+anchor_right = 0.996212
+anchor_bottom = 0.150424
+theme_override_font_sizes/font_size = 49
+text = "10$"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 2
+anchor_left = -0.0568182
+anchor_top = 0.180085
+anchor_right = 1.04924
+anchor_bottom = 0.478814
+size_flags_vertical = 3
+texture = ExtResource("1_os3pf")
+expand_mode = 1
+stretch_mode = 5
+metadata/_edit_use_anchors_ = true
+
+[node name="Info" type="Control" parent="."]
+layout_mode = 2
+anchors_preset = 0
+anchor_top = 0.457627
+anchor_right = 0.996212
+anchor_bottom = 1.0
+size_flags_vertical = 3
+size_flags_stretch_ratio = 2.01
+metadata/_edit_use_anchors_ = true
+
+[node name="PinLabel" type="Label" parent="Info"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.130909
+anchor_right = 0.5
+anchor_bottom = 0.130909
+offset_left = -21.5
+offset_top = 11.4873
+offset_right = 21.5
+offset_bottom = 53.4873
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 28
+text = "Pin"
+metadata/_edit_use_anchors_ = true
+
+[node name="Pin" type="Label" parent="Info"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.283636
+anchor_right = 0.996875
+anchor_bottom = 0.450909
+offset_top = 3.38918
+offset_right = 1.82187
+offset_bottom = 3.38919
+theme_override_font_sizes/font_size = 26
+text = "1234-5678-9012-3456"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="DateLabel" type="Label" parent="Info"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.16875
+anchor_top = 0.450909
+anchor_right = 0.29375
+anchor_bottom = 0.545455
+offset_left = -0.765621
+offset_top = 15.5673
+offset_right = 3.35938
+offset_bottom = 17.3635
+text = "Date"
+metadata/_edit_use_anchors_ = true
+
+[node name="Date" type="Label" parent="Info"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.109375
+anchor_top = 0.556364
+anchor_right = 0.35
+anchor_bottom = 0.694545
+offset_left = -0.765625
+offset_top = 15.5673
+offset_right = 1.95
+offset_bottom = 18.193
+theme_override_font_sizes/font_size = 25
+text = "04/20"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="CVCLabel" type="Label" parent="Info"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.7
+anchor_top = 0.450909
+anchor_right = 0.825
+anchor_bottom = 0.545455
+offset_left = -0.765625
+offset_top = 15.5673
+offset_right = -0.765625
+offset_bottom = 17.3635
+text = "CVC"
+metadata/_edit_use_anchors_ = true
+
+[node name="CVC" type="Label" parent="Info"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.65
+anchor_top = 0.556364
+anchor_right = 0.85
+anchor_bottom = 0.694545
+offset_left = -0.765625
+offset_top = 15.5673
+offset_right = -0.765625
+offset_bottom = 18.193
+theme_override_font_sizes/font_size = 25
+text = "420"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true

@@ -50,8 +50,7 @@
         </activity>
 <!-- Sample AdMob app ID: ca-app-pub-3940256099942544~3347511713 -->
         <meta-data
-	        tools:replace="android:value"
-	        android:name="com.google.android.gms.ads.APPLICATION_ID"
+	        android:name="com.google.android.gms.ads.ca-app-pub-2038097084175160~6632922927"
 	        android:value="ca-app-pub-2038097084175160~6632922927"/>
 
 

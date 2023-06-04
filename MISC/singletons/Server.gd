@@ -6,6 +6,9 @@ var mainSceneNode
 var minesNode 
 var numberRushNode
 var leaderBoardNode
+var winningsNode
+
+
 
 var newScoreUpdate = []
 
@@ -26,6 +29,7 @@ func join_server():
 func join_as_client() -> void:
 	var client_id: int = multiplayer.get_unique_id()
 	var player_name = Data.retrieveID()
+	print(player_name)
 	rpc_id(1, "serverConnectPlayer", client_id, player_name, )
 
 
@@ -65,6 +69,8 @@ func updateScore(score):
 @rpc("reliable")
 func returnUID(UID):
 	print("connction to Server established")
+	if UID == null:
+		return
 	Data.storeID(UID)
 
 
@@ -210,5 +216,19 @@ func addScoreChangeUpdate(change,username):
 		return
 	
 	newScoreUpdate.insert(0, [change, username])
+
+func loadRewardPage():
+	var UID = Data.retrieveID()
+	rpc_id(1, "loadRewardPageReceive", UID)
+
+
+@rpc("reliable", "any_peer")
+func loadRewardPageReceive(UID):
+	pass
+
+
+@rpc("reliable")
+func loadRewardPageReturn(WinningsInfo, winners):
+	winningsNode.proccessRewardPage(WinningsInfo, winners)
 
 

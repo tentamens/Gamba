@@ -70,7 +70,7 @@ config={
 [application]
 
 config/name="Gamba"
-run/main_scene="res://Scenes/UI/leaderBoardCashOut.tscn"
+run/main_scene="res://Scenes/UI/StartScene.tscn"
 config/features=PackedStringArray("4.0", "Forward Plus")
 config/icon="res://Sprites/Icons/00022-3141277294.png"
 
@@ -97,6 +97,7 @@ enabled=PackedStringArray()
 [input_devices]
 
 pointing/emulate_touch_from_mouse=true
+pointing/emulate_mouse_from_touch=false
 
 [physics]
 

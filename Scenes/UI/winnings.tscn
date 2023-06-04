@@ -1,0 +1,161 @@
+[gd_scene load_steps=7 format=3 uid="uid://bx17h61ky606t"]
+
+[ext_resource type="Script" path="res://Scenes/UI/winnings.gd" id="1_eb8nu"]
+[ext_resource type="Script" path="res://Scenes/UI/Winners.gd" id="1_kc308"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2ills"]
+bg_color = Color(0.180392, 0.203922, 0.25098, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_detail = 11
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ng2p2"]
+bg_color = Color(0.231373, 0.258824, 0.321569, 1)
+corner_radius_bottom_right = 61
+corner_detail = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i1g43"]
+bg_color = Color(0.215686, 0.219608, 0.219608, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.360784, 0.403922, 0.494118, 1)
+corner_radius_top_left = 27
+corner_radius_top_right = 27
+corner_radius_bottom_right = 27
+corner_radius_bottom_left = 27
+shadow_size = 5
+shadow_offset = Vector2(4.682, 4.339)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_crixh"]
+bg_color = Color(0.215686, 0.219608, 0.219608, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.360784, 0.403922, 0.494118, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[node name="winnings" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -4.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_eb8nu")
+
+[node name="background" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BackPanel" type="Panel" parent="background"]
+layout_mode = 0
+offset_left = 1282.0
+offset_top = 3.0
+offset_right = 2006.0
+offset_bottom = 1287.0
+rotation = 1.57079
+theme_override_styles/panel = SubResource("StyleBoxFlat_2ills")
+
+[node name="Panel" type="Panel" parent="background"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.670313
+anchor_bottom = 0.934722
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ng2p2")
+metadata/_edit_use_anchors_ = true
+
+[node name="Button" type="Button" parent="background"]
+layout_mode = 0
+offset_left = 19.0
+offset_top = 11.0
+offset_right = 77.0
+offset_bottom = 70.0
+theme_override_font_sizes/font_size = 38
+theme_override_styles/normal = SubResource("StyleBoxFlat_i1g43")
+text = "<"
+
+[node name="rightSideWinners" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="leaderBoardLabel" type="Label" parent="rightSideWinners"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.74368
+anchor_top = 0.0208333
+anchor_right = 0.887209
+anchor_bottom = 0.0805556
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.584314, 0.631373, 0.721569, 1)
+theme_override_font_sizes/font_size = 29
+text = "Winners
+"
+
+[node name="Winners" type="ScrollContainer" parent="rightSideWinners"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.703906
+anchor_top = 0.0787293
+anchor_right = 0.966406
+anchor_bottom = 0.819061
+theme_override_styles/panel = SubResource("StyleBoxFlat_crixh")
+script = ExtResource("1_kc308")
+metadata/_edit_use_anchors_ = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="rightSideWinners/Winners"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Winnings" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="Winnings"]
+layout_mode = 0
+offset_left = 113.0
+offset_top = 288.0
+offset_right = 733.0
+offset_bottom = 338.0
+theme_override_colors/font_color = Color(0.568627, 0.568627, 0.568627, 0.4)
+theme_override_font_sizes/font_size = 34
+text = "*anything you win will show up here*"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Winnings"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0398437
+anchor_top = 0.116667
+anchor_right = 0.665625
+anchor_bottom = 0.8375
+metadata/_edit_use_anchors_ = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Winnings/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 17
+alignment = 1

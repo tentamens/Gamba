@@ -1,6 +1,6 @@
 extends Node
 
-var path = "res://Data/playerState.dat"
+var path = "user://playerState.name"
 
 var gravity
 var side2sidePullNums
@@ -14,6 +14,7 @@ func storeID(id):
 func retrieveID():
 	var file = FileAccess.open(path, FileAccess.READ)
 	if file == null:
+		print(null)
 		return null
 	var content = file.get_as_text()
 	var id = str_to_var(content)

@@ -6,6 +6,7 @@ var lb
 
 
 func _ready():
+	top_level = true
 	await get_tree().create_timer(1.0).timeout
 	Server.leaderBoardNode = self
 	Server.getLeaderBoard()
@@ -39,3 +40,9 @@ func sort_ascending(a, b):
 	return false
 
 
+
+
+
+
+func _on_winnings_pressed():
+	get_tree().change_scene_to_file("res://Scenes/UI/winnings.tscn")
