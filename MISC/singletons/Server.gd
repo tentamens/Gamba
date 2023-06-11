@@ -7,9 +7,10 @@ var minesNode
 var numberRushNode
 var leaderBoardNode
 var winningsNode
+var CONNECT = false
 
 
-
+@onready var cert = load("res://MISC/CerfificateX509_Certificate.crt")
 var newScoreUpdate = []
 
 
@@ -18,11 +19,13 @@ func _ready():
 	multiplayer.connected_to_server.connect(self.join_as_client)
 	join_server()
 
+@export var ip = "10.0.0.19"
 
 func join_server():
 	var peer = ENetMultiplayerPeer.new()
-	
-	peer.create_client('10.0.0.19', DEFAULT_PORT)
+	var client_tls_options = TLSOptions.client_unsafe(cert)
+	peer.create_client(ip, DEFAULT_PORT)
+	peer.host.dtls_client_setup(ip, client_tls_options)
 	multiplayer.multiplayer_peer = peer
 
 
@@ -30,6 +33,7 @@ func join_as_client() -> void:
 	var client_id: int = multiplayer.get_unique_id()
 	var player_name = Data.retrieveID()
 	print(player_name)
+	CONNECT = true
 	rpc_id(1, "serverConnectPlayer", client_id, player_name, )
 
 
@@ -126,9 +130,13 @@ func clickMineProcessSend(num):
 
 
 @rpc("reliable")
-func clickMineProcessSendReturn(score, num, result):
-	Score.score = score
-	minesNode.updateButtonLook(num, result)
+func clickMineProcessSendReturn(score, num, result, multiplyer, fullBoard):
+	
+	minesNode.updateButtonLook(num, result, multiplyer, fullBoard)
+	
+	if score != null:
+		Score.score = score
+
 
 func cashOutMinesSend():
 	rpc_id(1, "cashOutMinesRecieve")

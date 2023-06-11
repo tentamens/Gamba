@@ -1,10 +1,10 @@
-[gd_scene load_steps=12 format=3 uid="uid://7o4htnbmi2ei"]
+[gd_scene load_steps=13 format=3 uid="uid://7o4htnbmi2ei"]
 
 [ext_resource type="Script" path="res://Scenes/UI/leaderBoard.gd" id="1_phfi5"]
 [ext_resource type="Script" path="res://Scenes/UI/leaderBoardCashOut.gd" id="1_skd2e"]
 [ext_resource type="StyleBox" uid="uid://dqmb2yav64yiu" path="res://MISC/styles/buttonNormal.tres" id="1_skyan"]
 [ext_resource type="StyleBox" uid="uid://dwogkwmj4yjop" path="res://MISC/styles/GreenButtonNormal.tres" id="2_w8e1p"]
-[ext_resource type="Texture2D" uid="uid://gm34lwousoo" path="res://Sprites/Icons/Mines.PNG" id="4_nidcd"]
+[ext_resource type="Texture2D" uid="uid://hij7vyiaict3" path="res://Sprites/Icons/MinesIcon.png" id="4_43fno"]
 [ext_resource type="Texture2D" uid="uid://cj3jasr82dkok" path="res://Sprites/Icons/NumberRushThing.png" id="5_y4nna"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_exk5a"]
@@ -39,6 +39,13 @@ corner_radius_bottom_right = 5
 corner_radius_bottom_left = 5
 shadow_size = 5
 shadow_offset = Vector2(4.682, 4.339)
+
+[sub_resource type="Environment" id="Environment_b24kr"]
+background_mode = 3
+glow_intensity = 0.94
+glow_strength = 2.0
+glow_bloom = 0.03
+glow_blend_mode = 3
 
 [node name="leaderBoardCashOut" type="Control"]
 layout_mode = 3
@@ -112,7 +119,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0.584314, 0.631373, 0.721569, 1)
 theme_override_font_sizes/font_size = 29
-text = "LeaderBoard"
+text = "Leader Board"
 
 [node name="leaderBoard" type="ScrollContainer" parent="rightSideLeaderBoard"]
 layout_mode = 1
@@ -150,20 +157,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Mines" type="Button" parent="GameSelect"]
-top_level = true
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.388235
-anchor_top = 0.0416667
-anchor_right = 0.5521
-anchor_bottom = 0.565195
-offset_top = 29.0
-offset_right = 31.0723
-offset_bottom = 85.0597
-scale = Vector2(0.870532, 0.870532)
-icon = ExtResource("4_nidcd")
-
 [node name="numberRush" type="TextureButton" parent="GameSelect"]
 top_level = true
 layout_mode = 0
@@ -175,21 +168,36 @@ scale = Vector2(0.460094, 0.460094)
 texture_normal = ExtResource("5_y4nna")
 stretch_mode = 0
 
-[node name="Panel" type="Panel" parent="GameSelect"]
+[node name="Mines" type="TextureButton" parent="GameSelect"]
+top_level = true
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.389062
+anchor_top = 0.0930556
+anchor_right = 0.609932
+anchor_bottom = 0.725392
+offset_right = 3.28705
+offset_bottom = 17.7177
+scale = Vector2(0.809774, 0.856031)
+texture_normal = ExtResource("4_43fno")
+stretch_mode = 0
+metadata/_edit_use_anchors_ = true
+
+[node name="miniGameDivider" type="Panel" parent="GameSelect"]
 layout_mode = 0
 offset_top = 47.0
 offset_right = 861.0
 offset_bottom = 58.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_talav")
 
-[node name="Label" type="Label" parent="GameSelect"]
+[node name="MiniGames" type="Label" parent="GameSelect"]
 layout_mode = 0
-offset_left = 11.0
-offset_top = 15.0
-offset_right = 388.0
-offset_bottom = 48.0
+offset_left = 1.0
+offset_top = -6.0
+offset_right = 378.0
+offset_bottom = 61.0
 theme_override_colors/font_color = Color(0.784314, 0.784314, 0.784314, 0.596078)
-theme_override_font_sizes/font_size = 29
+theme_override_font_sizes/font_size = 46
 text = "Mini Games"
 
 [node name="bottomCashOut" type="Control" parent="."]
@@ -335,7 +343,10 @@ theme_override_font_sizes/font_size = 14
 text = "*note override your previous score"
 metadata/_edit_use_anchors_ = true
 
-[connection signal="pressed" from="GameSelect/Mines" to="." method="_on_mines_pressed"]
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_b24kr")
+
 [connection signal="pressed" from="GameSelect/numberRush" to="." method="_on_number_rush_pressed"]
+[connection signal="pressed" from="GameSelect/Mines" to="." method="_on_mines_pressed"]
 [connection signal="pressed" from="bottomCashOut/cashOutButton" to="." method="_on_cash_out_button_pressed"]
 [connection signal="pressed" from="CanvasLayer/CashOutUsername/confirmButton" to="." method="_on_confirm_button_pressed"]

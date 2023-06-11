@@ -79,7 +79,6 @@ config/icon="res://Sprites/Icons/00022-3141277294.png"
 Score="*res://MISC/singletons/Score.gd"
 Server="*res://MISC/singletons/Server.gd"
 Data="*res://MISC/singletons/Data.gd"
-SwipeDetection="res://MISC/singletons/SwipeDetection.gd"
 MobileAds="*res://addons/admob/src/singletons/MobileAds.gd"
 
 [display]

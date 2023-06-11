@@ -22,13 +22,17 @@ func numberRushTimerStart():
 func countDownStart():
 	$countUpDelay.start()
 
-
+var multiplyerSending = 0
 
 func _on_count_up_delay_timeout():
 	currentMultipler += 0.01
+	multiplyerSending += 0.01
 	
 	label.text = (("%.2f" % currentMultipler) + "x")
-	Server.numberRushUpdateProccessSend(currentMultipler)
+	if multiplyerSending >= 0.05:
+		print("sent")
+		Server.numberRushUpdateProccessSend(currentMultipler)
+		multiplyerSending = 0
 
 
 func numberRushBroke():

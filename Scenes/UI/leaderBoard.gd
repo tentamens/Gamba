@@ -7,9 +7,15 @@ var lb
 
 func _ready():
 	top_level = true
-	await get_tree().create_timer(1.0).timeout
-	Server.leaderBoardNode = self
-	Server.getLeaderBoard()
+	callLoadLeaderBoard()
+
+func callLoadLeaderBoard():
+	if Server.CONNECT == true:
+		Server.leaderBoardNode = self
+		Server.getLeaderBoard()
+		return
+	await get_tree().create_timer(0.2).timeout
+	callLoadLeaderBoard()
 
 
 func returnLeaderBoard(leaderBoard: Array):
@@ -32,6 +38,10 @@ func projectLeaderBoardPos():
 	leaderBoard.sort_custom(sort_ascending)
 	
 	return leaderBoard.bsearch(["Why you looking at the code o.O"], false)
+
+func UpdateProjectPosition():
+	get_parent().get_node("LineEdit").text = str(projectLeaderBoardPos())
+
 
 
 func sort_ascending(a, b):
